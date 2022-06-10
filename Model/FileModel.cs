@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace arch_sync
+namespace arch_sync.Model
 {
 	public class FileModel
 	{
