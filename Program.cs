@@ -13,7 +13,7 @@ namespace arch_sync
         	//new ClassMethodUnit().Execute();
         	
         	//Patriot
-        	new ClassStubUnit().Execute();
+        	//new ClassStubUnit().Execute();
         	
         	//new IntrfaceClass().Execute();
         	
