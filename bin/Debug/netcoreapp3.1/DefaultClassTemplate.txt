@@ -1,0 +1,8 @@
+using {interface_namespace};
+
+namespace {namespace}
+{
+	public class {class} : {interface}
+	{
+	}	
+}

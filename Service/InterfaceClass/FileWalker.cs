@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using arch_sync.Model;
 
-namespace arch_sync.Service
+namespace arch_sync.Service.InterfaceClass
 {
 	public class FileWalker
 	{
