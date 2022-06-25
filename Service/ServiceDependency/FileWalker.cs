@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
@@ -12,9 +13,10 @@ namespace arch_sync.Service.ServiceDependency
 			List<FileModel> list = new List<FileModel>();
 			
 			var files = Directory.GetFiles(folder, "I*.cs", SearchOption.AllDirectories);
-			
+			Console.WriteLine(files.Length);
 			list.AddRange(files.Select(f => 
 			{
+				Console.WriteLine(f);
 				var n = "";
 				var p = Path.GetDirectoryName(f);
 				

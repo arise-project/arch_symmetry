@@ -21,6 +21,8 @@ namespace arch_sync.Unit
         	
         	var bn = new DirectoryInfo(config.BaseDirectory).Name;
         	Console.WriteLine("Base namespace: " + bn);
+        	
+        	Console.WriteLine("Service directory: " + tp);
         	var fms = new FileWalker().Walk(tp);
         	Console.WriteLine("Services: " + fms.Count);
         	
