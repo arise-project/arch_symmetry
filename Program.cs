@@ -17,7 +17,9 @@ namespace arch_sync
         	
         	//new IntrfaceClass().Execute();
         	
-        	new ServiceDependencyUnit().Execute();
+        	//new ServiceDependencyUnit().Execute();
+        	
+        	new UnitBuilderUnit().Execute();
         }
     }
 }
