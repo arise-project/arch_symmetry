@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/home/galliumos/.dotnet/store/|arch|/|tfm|",
-      "/home/galliumos/.nuget/packages"
-    ]
-  }
-}
