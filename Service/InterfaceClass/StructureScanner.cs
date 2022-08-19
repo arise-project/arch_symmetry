@@ -1,15 +1,13 @@
 using System;
 using System.IO;
 using System.Linq;
-using System.Collections.Generic;
 using arch_sync.Model.ClassInterface;
-using arch_sync.Model;
 
 namespace arch_sync.Service.InterfaceClass
 {
-	public class StructureScanner
+    public class StructureScanner
 	{
-		public StructureModel Scan(AppConfiguration ac)
+		public StructureModel Scan(AppConfig ac)
 		{
 			StructureModel sm = new StructureModel();
 			

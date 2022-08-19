@@ -3,12 +3,11 @@ using System.Linq;
 using System.Text.Json;
 using System.IO;
 using arch_sync.Service.ClassMethod;
-using arch_sync.Model;
 using arch_sync.Model.ClassMethod;
 
 namespace arch_sync.Unit
 {
-	public class ClassMethodUnit
+    public class ClassMethodUnit
 	{
 		public void Execute()
 		{
@@ -16,7 +15,7 @@ namespace arch_sync.Unit
         	Console.WriteLine("======");
         	Console.WriteLine(ct);
         	Console.WriteLine("======");
-        	var config = JsonSerializer.Deserialize<AppConfiguration>(ct);
+        	var config = JsonSerializer.Deserialize<AppConfig>(ct);
         	
         	var ip = Path.Combine(config.BaseDirectory, config.ServiceFolder, "Interface");
         	var cp = Path.Combine(config.BaseDirectory, config.ServiceFolder);

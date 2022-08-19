@@ -7,7 +7,7 @@ namespace arch_sync.Service.ClassInterface
 {
 	public class StructureBuilder
 	{
-		public void Build(AppConfiguration ac, StructureModel sm, List<ClassModel> cms, List<InterfaceModel> ims)
+		public void Build(AppConfig ac, StructureModel sm, List<ClassModel> cms, List<InterfaceModel> ims)
 		{
 			Console.WriteLine();
 			var ec = cms.Where(c => c.Empty);

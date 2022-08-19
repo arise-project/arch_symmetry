@@ -2,13 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using arch_sync.Model.ClassInterface;
-using arch_sync.Model;
 
 namespace arch_sync.Service.InterfaceClass
 {
-	public class StructureBuilder
+    public class StructureBuilder
 	{
-		public void Build(AppConfiguration ac, StructureModel sm, List<ClassModel> cms, List<InterfaceModel> ims)
+		public void Build(AppConfig ac, StructureModel sm, List<ClassModel> cms, List<InterfaceModel> ims)
 		{
 			Console.WriteLine();
 			var ec = cms.Where(c => c.Empty);

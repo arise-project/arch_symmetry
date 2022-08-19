@@ -1,12 +1,11 @@
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
-using arch_sync.Model.ClassInterface;
 using arch_sync.Model;
 
 namespace arch_sync.Service.ClassInterface
 {
-	public class ClassFileWalker
+    public class ClassFileWalker
 	{
 		public List<FileModel> Walk(string folder)
 		{

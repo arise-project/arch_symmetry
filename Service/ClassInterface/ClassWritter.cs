@@ -7,7 +7,7 @@ namespace arch_sync.Service.ClassInterface
 {
 	public class ClassWritter
 	{
-		public void Write(AppConfiguration ac, NamespaceModel nm, ClassModel cm, InterfaceModel im)
+		public void Write(AppConfig ac, NamespaceModel nm, ClassModel cm, InterfaceModel im)
 		{
 			var pd = new DirectoryInfo(ac.BaseDirectory).Parent.FullName;
 			var cp = cm != null ? Path.Combine(pd, cm.Namespace?.Replace(".","/"), cm.Name + ".cs") : null;

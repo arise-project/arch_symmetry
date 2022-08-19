@@ -1,6 +1,6 @@
 namespace arch_sync
 {
-	public class AppConfiguration
+	public class AppConfig
 	{
 		public string BaseDirectory { get;set; }
 		

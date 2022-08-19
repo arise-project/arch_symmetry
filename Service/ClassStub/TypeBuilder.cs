@@ -1,14 +1,11 @@
-using System;
 using System.IO;
-using System.Linq;
-using System.Collections.Generic;
 using arch_sync.Model;
 
 namespace arch_sync.Service.ClassStub
 {
-	public class TypeBuilder
+    public class TypeBuilder
 	{
-		public void Write(AppConfiguration ac, FileModel fm, FileType ft)
+		public void Write(AppConfig ac, FileModel fm, FileType ft)
 		{
 			//Igla
 			var bn = new DirectoryInfo(ac.BaseDirectory).Name;

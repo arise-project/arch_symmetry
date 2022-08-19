@@ -1,13 +1,11 @@
 using System;
-using System.IO;
 using System.Linq;
-using System.Collections.Generic;
 using arch_sync.Model;
 using arch_sync.Model.ClassMethod;
 
 namespace arch_sync.Service.ClassMethod
 {
-	public class FileScopeSelector
+    public class FileScopeSelector
 	{
 		public FileScope Seek(FileModel fm, int deep)
 		{

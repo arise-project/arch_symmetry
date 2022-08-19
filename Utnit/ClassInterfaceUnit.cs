@@ -2,11 +2,10 @@ using System;
 using System.Text.Json;
 using System.IO;
 using arch_sync.Service.ClassInterface;
-using arch_sync.Model.ClassInterface;
 
 namespace arch_sync.Unit
 {
-	public class ClassInterfaceUnit
+    public class ClassInterfaceUnit
 	{
 		public void Execute()
 		{
@@ -14,7 +13,7 @@ namespace arch_sync.Unit
         	Console.WriteLine("======");
         	Console.WriteLine(ct);
         	Console.WriteLine("======");
-        	var config = JsonSerializer.Deserialize<AppConfiguration>(ct);
+        	var config = JsonSerializer.Deserialize<AppConfig>(ct);
         	
         	var sm = new StructureScanner().Scan(config);
         	

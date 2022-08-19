@@ -1,11 +1,9 @@
-using System.IO;
 using System.Linq;
 using System.Collections.Generic;
-using arch_sync.Model;
 
 namespace arch_sync.Service.ClassMethod
 {
-	public class SignatureExtractor
+    public class SignatureExtractor
 	{
 		public List<string> Extract(List<string> list)
 		{
