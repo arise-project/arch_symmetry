@@ -9,6 +9,7 @@ namespace arch_sync.Service.StaticClass
             AppConfig ac, 
             FileModel fm, 
             FileType ft, 
+            string dt,
             string method)
         {
             //Igla
@@ -16,8 +17,7 @@ namespace arch_sync.Service.StaticClass
             var ns = bn + "." + ac.ServiceFolder;
 
             var type = "";
-            var dt = File.ReadAllText("template/StaticClass.txt");
-
+            
             switch (ft)
             {
                 case FileType.Class:
@@ -27,7 +27,7 @@ namespace arch_sync.Service.StaticClass
                 //     type = "interface";
                 //     break;
             }
-
+            
             dt = dt.Replace("{namespace}", ns)
                    .Replace("{type}", type)
                    .Replace("{typeName}", fm.Name)

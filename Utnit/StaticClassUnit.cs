@@ -7,6 +7,13 @@ namespace arch_sync.Unit
 {
     public class StaticClassUnit
     {
+        private readonly AppConfig ac;
+
+        public StaticClassUnit(AppConfig ac)
+        {
+            this.ac = ac;
+        }
+
         public void Execute()
         {
             var ct = File.ReadAllText("appSettings.json");
@@ -18,7 +25,22 @@ namespace arch_sync.Unit
             var tp = Path.Combine(config.BaseDirectory, config.ServiceFolder);
 
             Console.WriteLine("======");
-            Console.WriteLine("not implemented");
+            
+            var dt = File.ReadAllText("template/StaticClass.txt");
+            
+            string [] records = File.ReadAllLines(ac.ClassMethods);
+
+            foreach(var rec in records)
+            {
+                var fileName = rec.Replace(",","_");
+                new TypeBuilder().Write(
+                    ac, 
+                    new Model.FileModel(fileName, tp, dt),
+                    Model.FileType.Class,
+                    dt,
+                    new MethodBuilder().Gen(rec));
+            }
+
         }
     }
 }
