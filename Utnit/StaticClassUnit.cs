@@ -7,22 +7,15 @@ namespace arch_sync.Unit
 {
     public class StaticClassUnit
     {
-        private readonly AppConfig ac;
-
-        public StaticClassUnit(AppConfig ac)
-        {
-            this.ac = ac;
-        }
-
         public void Execute()
         {
             var ct = File.ReadAllText("appSettings.json");
             Console.WriteLine("======");
             Console.WriteLine(ct);
             Console.WriteLine("======");
-            var config = JsonSerializer.Deserialize<AppConfig>(ct);
+            var ac = JsonSerializer.Deserialize<AppConfig>(ct);
 
-            var tp = Path.Combine(config.BaseDirectory, config.ServiceFolder);
+            var tp = Path.Combine(ac.BaseDirectory, ac.ServiceFolder);
 
             Console.WriteLine("======");
             
