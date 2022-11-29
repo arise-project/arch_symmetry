@@ -26,12 +26,16 @@ namespace arch_sync.Unit
             foreach(var rec in records)
             {
                 var fileName = rec.Replace(",","_");
-                new TypeBuilder().Write(
+                if(!string.IsNullOrWhiteSpace(fileName))
+                {
+                    new TypeBuilder().Write(
                     ac, 
-                    new Model.FileModel(fileName, tp, dt),
+                    new Model.FileModel(Path.Combine(tp,fileName), tp, dt),
                     Model.FileType.Class,
                     dt,
                     new MethodBuilder().Gen(rec));
+                }
+                
             }
 
         }

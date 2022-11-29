@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using arch_sync.Model;
 
@@ -7,8 +8,10 @@ namespace arch_sync.Service.StaticClass
     {
         public string Gen(string rec)
         {
+            
             var s =  rec.Split(',');
-            if(rec.Length == 2)
+            Console.WriteLine("rec" + s.Length + ":" +rec);
+            if(s.Length == 2)
             {
                 return s[1];
             }
