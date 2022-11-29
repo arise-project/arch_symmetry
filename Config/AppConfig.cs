@@ -9,5 +9,7 @@ namespace arch_sync
         public string StartupFile { get; set; }
 
         public string ServicesDiMarker { get; set; }
+
+        public string ClassMethods {get;set;}
     }
 }
