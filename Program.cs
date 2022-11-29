@@ -19,7 +19,9 @@ namespace arch_sync
 
             //new ServiceDependencyUnit().Execute();
 
-            new UnitBuilderUnit().Execute();
+            //THeMIS
+            //new UnitBuilderUnit().Execute();
+            
         }
     }
 }

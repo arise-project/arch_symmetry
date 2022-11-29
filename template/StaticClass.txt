@@ -1,0 +1,10 @@
+namespace {namespace}
+{
+	public partial static {type} {typeName}
+	{
+        public static void {method}()
+        {
+
+        }
+	}	
+}
