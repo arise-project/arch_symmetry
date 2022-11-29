@@ -30,7 +30,7 @@ namespace arch_sync.Unit
                 {
                     new TypeBuilder().Write(
                     ac, 
-                    new Model.FileModel(Path.Combine(tp,fileName), tp, dt),
+                    new Model.FileModel(Path.Combine(tp,fileName + ".cs"), tp, dt),
                     Model.FileType.Class,
                     dt,
                     new MethodBuilder().Gen(rec));
