@@ -1,6 +1,6 @@
 namespace {namespace}
 {
-	public partial static {type} {typeName}
+	public static partial {type} {typeName}
 	{
                 public static void {method}()
                 {

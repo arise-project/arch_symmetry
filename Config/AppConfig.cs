@@ -13,7 +13,9 @@ namespace arch_sync
         public string ClassMethods {get;set;}
 
         public string MethodCallMarker {get;set;}
-        
+
         public string WorkFile {get;set;}
+
+        public string RecordFilter {get;set;}
     }
 }

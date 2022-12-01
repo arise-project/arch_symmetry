@@ -28,9 +28,16 @@ namespace arch_sync.Unit
             var b = new StringBuilder();
             foreach(var rec in records)
             {
-                b.AppendLine(string.Format(dt, rec.Split(',')[0], new MethodBuilder().Gen(rec)));
+                if(!string.IsNullOrWhiteSpace(rec) && 
+                (string.IsNullOrEmpty(ac.RecordFilter) || 
+                rec.StartsWith(ac.RecordFilter)))
+                {
+                    b.AppendLine(dt
+                    .Replace("{class}", rec.Split(',')[0])
+                    .Replace("{method}", new MethodBuilder().Gen(rec)));
+                }
             }
-            new InsertText().Insert(fileName,ac.MethodCallMarker,dt);
+            new InsertText().Insert(fileName,ac.MethodCallMarker,b.ToString());
         }
     }
 }
