@@ -8,6 +8,7 @@ namespace arch_sync.Service.StaticClass
         public void Write(
             AppConfig ac, 
             FileModel fm, 
+            string typeName,
             FileType ft, 
             string dt,
             string method)
@@ -30,7 +31,7 @@ namespace arch_sync.Service.StaticClass
             
             dt = dt.Replace("{namespace}", ns)
                    .Replace("{type}", type)
-                   .Replace("{typeName}", fm.Name)
+                   .Replace("{typeName}", typeName)
                    .Replace("{method}", method);
 
             File.WriteAllText(fm.FullName, dt);

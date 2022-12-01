@@ -11,5 +11,9 @@ namespace arch_sync
         public string ServicesDiMarker { get; set; }
 
         public string ClassMethods {get;set;}
+
+        public string MethodCallMarker {get;set;}
+        
+        public string WorkFile {get;set;}
     }
 }

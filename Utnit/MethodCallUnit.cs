@@ -1,11 +1,13 @@
 using System;
 using System.Text.Json;
 using System.IO;
+using arch_sync.Service.MethodCall;
+using System.Text;
 using arch_sync.Service.StaticClass;
 
 namespace arch_sync.Unit
 {
-    public class StaticClassUnit
+    public class MethodCallUnit
     {
         public void Execute()
         {
@@ -19,26 +21,16 @@ namespace arch_sync.Unit
 
             Console.WriteLine("======");
             
-            var dt = File.ReadAllText("template/StaticClass.txt");
+            var dt = "{class}.{method}();";
             
             string [] records = File.ReadAllLines(ac.ClassMethods);
-
+            var fileName = Path.Combine(tp,ac.WorkFile);
+            var b = new StringBuilder();
             foreach(var rec in records)
             {
-                var fileName = rec.Replace(",","_");
-                if(!string.IsNullOrWhiteSpace(fileName))
-                {
-                    new TypeBuilder().Write(
-                    ac, 
-                    new Model.FileModel(Path.Combine(tp,fileName + ".cs"), tp, dt),
-                    rec.Split(',')[0],
-                    Model.FileType.Class,
-                    dt,
-                    new MethodBuilder().Gen(rec));
-                }
-                
+                b.AppendLine(string.Format(dt, rec.Split(',')[0], new MethodBuilder().Gen(rec)));
             }
-
+            new InsertText().Insert(fileName,ac.MethodCallMarker,dt);
         }
     }
 }
