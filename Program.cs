@@ -24,7 +24,9 @@ namespace arch_sync
             
             //new StaticClassUnit().Execute();
 
-            new MethodCallUnit().Execute();
+            //new MethodCallUnit().Execute();
+            
+            new SnippetUnit().Execute();
         }
     }
 }

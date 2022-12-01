@@ -11,6 +11,7 @@ namespace arch_sync.Service.MethodCall
             {
                 var text = File.ReadAllText(file);
                 int start = text.IndexOf(marker);
+                if(start == -1) return;
                 var beg = text.Substring(0, start);
                 var end = text.Substring(start + marker.Length);
                 File.WriteAllText(file, beg + snippet + Environment.NewLine + end);
