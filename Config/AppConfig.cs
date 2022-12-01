@@ -17,5 +17,7 @@ namespace arch_sync
         public string WorkFile {get;set;}
 
         public string RecordFilter {get;set;}
+        
+        public string Snippet {get;set;}
     }
 }

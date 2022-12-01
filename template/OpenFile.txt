@@ -1,0 +1,5 @@
+var pathSource = @"..\..\test.{inputExt}";
+using (var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read))
+{
+    //call method
+}

@@ -2,9 +2,9 @@ namespace {namespace}
 {
 	public static partial {type} {typeName}
 	{
-                public static void {method}()
-                {
-
-                }
+            public static void {method}()
+            {
+                //call method
+            }
 	}	
 }
