@@ -12,7 +12,7 @@ namespace arch_sync.Service.ServicesSetup
             var names = files.Select(f =>Path.GetFileNameWithoutExtension(f));
             return names
                 .Where(n => abstrations.Any(a => string.Equals(a, "I"+n)))
-                .Select(n => $"services.AddSingleton<{n},{abstrations.First(a => string.Equals(a, "I"+n))}>();");
+                .Select(n => $"services.AddSingleton<{abstrations.First(a => string.Equals(a, "I"+n))},{n}>();");
         }
     }
 }
