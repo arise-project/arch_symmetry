@@ -26,7 +26,10 @@ namespace arch_sync
 
             //new MethodCallUnit().Execute();
             
-            new SnippetUnit().Execute();
+            //
+            //new SnippetUnit().Execute();
+
+            new ServicesSetupUnit().Execute();
         }
     }
 }
