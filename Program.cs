@@ -22,14 +22,14 @@ namespace arch_sync
             //THeMIS
             //new UnitBuilderUnit().Execute();
             
-            //new StaticClassUnit().Execute();
+            new StaticClassUnit().Execute();
 
             //new MethodCallUnit().Execute();
             
             //
             //new SnippetUnit().Execute();
 
-            new ServicesSetupUnit().Execute();
+            //new ServicesSetupUnit().Execute();
         }
     }
 }

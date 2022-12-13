@@ -19,7 +19,7 @@ namespace arch_sync.Unit
 
             Console.WriteLine("======");
             
-            var dt = File.ReadAllText("template/StaticClass.txt");
+            var dt = File.ReadAllText("template/StaticClass.java.txt");
             
             string [] records = File.ReadAllLines(ac.ClassMethods);
 
@@ -30,7 +30,7 @@ namespace arch_sync.Unit
                 {
                     new TypeBuilder().Write(
                     ac, 
-                    new Model.FileModel(Path.Combine(tp,fileName + ".cs"), tp, dt),
+                    new Model.FileModel(Path.Combine(tp,fileName + ".java"), tp, dt),
                     rec.Split(',')[0],
                     Model.FileType.Class,
                     dt,
