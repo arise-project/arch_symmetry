@@ -19,7 +19,7 @@ namespace arch_sync.Unit
 
             Console.WriteLine("======");
             
-            var dt = File.ReadAllText("template/StaticClass.java.txt");
+            var dt = File.ReadAllText(ac.Template);
             
             string [] records = File.ReadAllLines(ac.ClassMethods);
 
@@ -29,14 +29,13 @@ namespace arch_sync.Unit
                 if(!string.IsNullOrWhiteSpace(fileName))
                 {
                     new TypeBuilder().Write(
-                    ac, 
-                    new Model.FileModel(Path.Combine(tp,fileName + ".java"), tp, dt),
+                    ac,
+                    new Model.FileModel(Path.Combine(tp,fileName + "." + ac.Lang), tp, dt),
                     rec.Split(',')[0],
                     Model.FileType.Class,
                     dt,
                     new MethodBuilder().Gen(rec));
                 }
-                
             }
 
         }
