@@ -19,5 +19,9 @@ namespace arch_sync
         public string RecordFilter {get;set;}
         
         public string Snippet {get;set;}
+
+        public string Template {get;set;}
+
+        public string Lang {get;set;}
     }
 }
