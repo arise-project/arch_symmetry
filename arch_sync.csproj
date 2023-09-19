@@ -24,4 +24,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Questions\Java\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="IKVM" Version="8.4.5" />
+    <PackageReference Include="IKVM.Reflection" Version="7.2.4630.5" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.5.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" />
+  </ItemGroup>
 </Project>
