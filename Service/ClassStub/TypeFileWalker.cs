@@ -11,7 +11,7 @@ namespace arch_sync.Service.ClassStub
         {
             List<FileModel> list = new List<FileModel>();
 
-            var files = Directory.GetFiles(folder, "*.cs", SearchOption.TopDirectoryOnly);
+            var files = Directory.GetFiles(folder, "*.cs", SearchOption.AllDirectories);
 
             list.AddRange(files
                 .Select(f => new FileModel(f, "", File.ReadAllText(f))));

@@ -13,7 +13,7 @@ namespace arch_sync
             //new ClassMethodUnit().Execute();
 
             //Patriot
-            //new ClassStubUnit().Execute();
+    	    new ClassStubUnit().Execute();
 
             //new IntrfaceClass().Execute();
 
@@ -22,7 +22,7 @@ namespace arch_sync
             //THeMIS
             //new UnitBuilderUnit().Execute();
             
-            new StaticClassUnit().Execute();
+            //new StaticClassUnit().Execute();
 
             //new MethodCallUnit().Execute();
             
