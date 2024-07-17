@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
   	<None Update="arch_sync.csproj">
@@ -28,8 +30,6 @@
     <Folder Include="Questions\Java\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="IKVM" Version="8.4.5" />
-    <PackageReference Include="IKVM.Reflection" Version="7.2.4630.5" />
     <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.5.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" />
   </ItemGroup>
